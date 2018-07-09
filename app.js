@@ -24,6 +24,9 @@ function onReady () {
     // attach the checkbox to the li
     newLi.appendChild(checkbox);
 
+    // attach deletebutton to li
+    newLi.appendChild(deletebutton)
+
     // attach the li to the ul
     toDoList.appendChild(newLi);
 
