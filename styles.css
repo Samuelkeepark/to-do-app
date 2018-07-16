@@ -1,0 +1,10 @@
+h1 {
+  color: gray;
+  font-weight: bold;
+  text-align: center;
+}
+
+label {
+  color: black;
+  font-weight: normal;
+}
