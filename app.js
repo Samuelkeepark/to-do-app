@@ -31,7 +31,7 @@ function onReady () {
     checkbox.classList.add("check");
 
     // deleteButton
-    deleteButton.classList.add("mdl-button", "mdl-js-button". "mdl-button--raised");
+    deleteButton.classList.add("mdl-button", "mdl-js-button", "mdl-button--raised");
 
     // attach the checkbox to the li
     newLi.appendChild(checkbox);
