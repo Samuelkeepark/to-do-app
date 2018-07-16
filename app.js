@@ -1,16 +1,14 @@
 function onReady() {
-  const toDos = [];
+  const toDos=[];
   const addToDoForm = document.getElementById('addToDoForm');
 
   function createNewToDo() {
     const newToDoText = document.getElementById('newToDoText');
-    if (!newToDoText.value) { return; }
-
+    if (!newToDoText.value) {return;}
     toDos.push({
       title: newToDoText.value,
       complete: false
     });
-
     newToDoText.value = '';
 
     renderTheUI();
@@ -31,7 +29,6 @@ function onReady() {
       toDoList.appendChild(newLi);
       newLi.appendChild(checkbox);
     });
-
   }
 
   addToDoForm.addEventListener('submit', event => {
@@ -40,8 +37,8 @@ function onReady() {
   });
 
   renderTheUI();
- }
+}
 
- window.onload = function() {
-   onReady();
+window.onload = function() {
+  onReady();
 };
