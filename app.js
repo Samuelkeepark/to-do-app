@@ -1,9 +1,9 @@
-function onReady () {
+function onReady() {
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
 
-  addToDoForm.addEventListener ('submit', event => {
+  addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
 
     // get the text
@@ -15,29 +15,35 @@ function onReady () {
     // create a new input
     let checkbox = document.createElement('input');
 
+    // create delete button
+    let deleteButton = document.createElement('button');
+
     // set the input's type to checkbox
-    checkbox.type = 'checkbox';
+    checkbox.type = "checkbox";
 
     // set the title
     newLi.textContent = title;
 
-    // set button text
-    deleteButton.textContent = 'Delete';
+    // set the button text
+    deleteButton.textContent = "Delete";
+
+    // // newLi style
+    // newLi.classList.add("demo-card-wide", "mdl-shadow--2dp");
 
     // newLi style
     newLi.classList.add("mdl-list__item-primary-content");
 
     // checkbox style
-    checkbox.classList.add("check");
+    checkbox.classList.add("check")
 
-    // deleteButton
-    deleteButton.classList.add("mdl-button", "mdl-js-button", "mdl-button--raised");
+    // deleteButton styles
+    deleteButton.classList.add("mdl-button", "mdl-js-button", "mdl-button--raised", "mdl-js-ripple-effect");
 
     // attach the checkbox to the li
-    newLi.appendChild(checkbox);
+    newLi.prepend(checkbox);
 
-    // attach deletebutton to li
-    newLi.appendChild(deletebutton)
+    // attach the button to the li
+    newLi.appendChild(deleteButton);
 
     // attach the li to the ul
     toDoList.appendChild(newLi);
@@ -45,20 +51,20 @@ function onReady () {
     // empty the input
     newToDoText.value = '';
 
-    // create delete button
-    let deletebutton = document.createElement('button');
 
-    // set button text
-    deleteButton.textContent = 'Delete';
 
-    deleteButton.onclick = function() {
+    // delete
+    deleteButton.onclick = function () {
       toDoList.removeChild(newLi);
     }
-    });
 
-    // attach delete button to newLi
-    newLi.appendChild(deleteButton);
-  };
+    // add styling
+    // newLi.classList.add("demo-list-item");
+
+
+
+  });
+}
 
 window.onload = function() {
   onReady();

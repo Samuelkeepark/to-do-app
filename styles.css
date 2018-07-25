@@ -8,3 +8,11 @@ label {
   color: black;
   font-weight: normal;
 }
+
+head {
+  text-align: center;
+}
+
+body {
+  align-items: center;
+}
